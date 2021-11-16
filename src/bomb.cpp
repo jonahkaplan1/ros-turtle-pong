@@ -8,7 +8,7 @@ cBomb::cBomb(ros::NodeHandle &nh)
 
     reset();
 
-    ball_pose_sub_ = nh_.subscribe<turtlesim::Pose>("/ball/pose", 1, &cBomb::poseCallbackBall, this);
+    // ball_pose_sub_ = nh_.subscribe<turtlesim::Pose>("/ball/pose", 1, &cBomb::poseCallbackBall, this);
     bomb_pose_sub_ = nh_.subscribe<turtlesim::Pose>("/bomb/pose", 1, &cBomb::poseCallbackBomb, this);
     pose_left_sub_ = nh_.subscribe<turtlesim::Pose>("/turtle_left/pose", 1, &cBomb::poseLeftCallback, this);
     pose_right_sub_ = nh_.subscribe<turtlesim::Pose>("/turtle_right/pose", 1, &cBomb::poseRightCallback, this);
@@ -199,7 +199,7 @@ void cBomb::checkPlayerCollision()
 }
 
 
-void cBomb::poseCallback(const turtlesim::PoseConstPtr& pose)
+void cBomb::poseCallbackBomb(const turtlesim::PoseConstPtr& pose)
 {
     pose_ = pose;
     ROS_INFO_THROTTLE(1, "x: %f, y: %f, theta: %f, linear_vel: %f, angular_vel: %f, dir: %i", 
@@ -241,7 +241,7 @@ void cBomb::setVel(double x, double theta)
     geometry_msgs::Twist twist;
     twist.linear.x = x;
     twist.angular.z = theta;
-    cmd_vel_pub_.publish<geometry_msgs::Twist>(twist);
+    bomb_cmd_vel_pub_.publish<geometry_msgs::Twist>(twist);
 }
 
 double cBomb::randomAngle()

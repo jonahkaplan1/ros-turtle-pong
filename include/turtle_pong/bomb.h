@@ -31,7 +31,8 @@ class cBomb
 public:
     cBomb(ros::NodeHandle &nh);
 
-    void poseCallback(const turtlesim::PoseConstPtr& pose);
+    void poseCallbackBall(const turtlesim::PoseConstPtr& pose);
+    void poseCallbackBomb(const turtlesim::PoseConstPtr& pose);
     void poseLeftCallback(const turtlesim::PoseConstPtr& pose);
     void poseRightCallback(const turtlesim::PoseConstPtr& pose);
     void penOff(bool off);
