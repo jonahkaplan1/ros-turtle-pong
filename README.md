@@ -1,3 +1,22 @@
+# Forked for Jonah Kaplan. Setup on Ubuntu vm on DigitalOcean
+
+Digital ocean setup: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
+
+ROS install: https://varhowto.com/install-ros-noetic-ubuntu-20-04/
+
+http://wiki.ros.org/catkin/Tutorials/create_a_workspace
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04
+
+
+https://fjp.at/ros/turtle-pong/
+
+https://github.com/fjp/ros-turtle-pong
+
+Purpose of the project is to explore ROS :)
+
+
+
 # Turtle Pong
 
 This repository hosts the source code for the ROS `turtle_pong` package which 
