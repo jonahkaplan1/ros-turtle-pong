@@ -199,7 +199,7 @@ void cBomb::checkPlayerCollision()
 }
 
 
-void cBomv::poseCallback(const turtlesim::PoseConstPtr& pose)
+void cBomb::poseCallback(const turtlesim::PoseConstPtr& pose)
 {
     pose_ = pose;
     ROS_INFO_THROTTLE(1, "x: %f, y: %f, theta: %f, linear_vel: %f, angular_vel: %f, dir: %i", 
