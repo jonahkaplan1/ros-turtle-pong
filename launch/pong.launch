@@ -2,6 +2,7 @@
     <!-- node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/ -->
     <node name="pong" pkg="turtle_pong" type="node" output="screen"/>
     <node name="ball" pkg="turtle_pong" type="turtle_pong_ball" output="screen"/>
-    <node name="bomb" pkg="turtle_pong" type="turtle_pong_bomb" output="screen"/>
+    <!-- Node of name bomb should still be of type turtle_pong_ball -->
+    <node name="bomb" pkg="turtle_pong" type="turtle_pong_ball" output="screen"/>
     <node name="key" pkg="turtle_pong" type="turtle_pong_key" output="screen"/>
 </launch>

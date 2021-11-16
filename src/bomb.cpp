@@ -268,8 +268,8 @@ int main(int argc, char** argv)
 
     turtlesim::Spawn spawn;
     spawn.request.name = "bomb";
-    spawn.request.x = 2.0;
-    spawn.request.y = 2.0;
+    spawn.request.x = 5.0;
+    spawn.request.y = 6.0;
     spawn.request.theta = 0.0;
     
     ROS_INFO("Spawn bomb turtle");
